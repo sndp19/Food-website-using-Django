@@ -1,0 +1,24 @@
+ {% extends 'food/base.html ' %}
+
+ {% block body %}
+<div class="row">
+  <div class="col-4   ">
+    <img  height="300px " width="400px"src="{{item.item_image}}" class="card">
+
+  </div>
+  <div class="col-6">
+    <h1>  {{item.item_name}} </h1>
+    <hr>
+    <br>
+
+    <h4> Description </h4>
+     <p>{{item.item_lg_desc}} </p>
+     <h4>Price  ₹ <b>{{item.item_price}}</b></h4>
+     <br>
+     <a class = "btn btn-danger btn-block" href="{% url 'food:delete_item' item.id}">Delete</a>
+
+  </div>
+
+</div>
+
+ {% endblock %}
